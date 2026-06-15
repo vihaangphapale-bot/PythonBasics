@@ -1,0 +1,5 @@
+name = input("What's your name: ")
+print(name)
+age = int(input("What's your age: "))
+print(age) 
+print("You're going to be " , age + 4 , " in 2030")
