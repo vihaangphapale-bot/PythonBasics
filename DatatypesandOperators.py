@@ -29,33 +29,3 @@
 #
 # or, and, not, not in, in
 #
-import operator
-
-ops = {
-    "+": operator.add,
-    "-": operator.sub,
-    "*": operator.mul,
-    "/": operator.truediv
-}
-
-# Get first number safely
-num1 = input("Enter first number: ")
-while not num1.isdigit():
-    num1 = input("Please enter a valid integer: ")
-num1 = int(num1)
-
-# Get operator safely
-op = input("Enter operator (+, -, *, /): ")
-while op not in ops:
-    op = input("Enter a valid operator (+, -, *, /): ")
-
-# Get second number safely
-num2 = input("Enter second number: ")
-while not num2.isdigit():
-    num2 = input("Please enter a valid integer: ")
-num2 = int(num2)
-
-# Compute result
-result = ops[op](num1, num2)
-
-print("Result:", result)

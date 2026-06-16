@@ -14,5 +14,5 @@
         # use del to delete
 # del num
 # print(num)
-a = b = c = 10
-print(a, b, c)
+# a = b = c = 10
+# print(a, b, c)
