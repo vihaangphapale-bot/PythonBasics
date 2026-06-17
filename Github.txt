@@ -1,11 +1,18 @@
-git init                                                    Set up a local repository
-git config --global user.name = "Vihaan Phapale"            Setting Credintials
-git config --global user.email = "vihaangphapale@gmail.com" Setting Credintials
-*git add .                                                add all files into repository
-*git commit -m "messege"                                    Saves Repository
-
+git init                                                   
+git config --global user.name = "Vihaan Phapale"            
+git config --global user.email = "vihaangphapale@gmail.com" 
+git add .                                          
+git commit -m "messege"                                    
 create repo on GitHub                       
 
-git branch -M main                                          Sets the main branch
-git remote add origin (link)                                Link Local Repository into the online 
-*git push origin main                                        Pushes it so it is visible online
+git branch -M main                                          
+git remote add origin (link)                                 
+git push origin main                                        
+
+
+
+
+
+git commit -m "messege"                                    
+create repo on GitHub    
+git push origin main  
