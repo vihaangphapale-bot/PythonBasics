@@ -1,4 +1,4 @@
-import sys
+
 # age = int(input("What is your age? "))
 # if age < 16 and age > 0:
 #     print("You have", 16-age , "more years to drive.")
@@ -20,10 +20,10 @@ import sys
 # print("Including your" , discount , "% Discount, your total cost is $" + str(price*((100-discount)/100)))
 
 
-year = int(input("What's the current year? "))
-if year % 4 == 0:
-    if not year % 100 == 0:
-        print("It's a leap year!")
-    if year % 400 == 0:
-        print("It's a leap year!")
+# year = int(input("What's the current year? "))
+# if year % 4 == 0:
+#     if not year % 100 == 0:
+#         print("It's a leap year!")
+#     if year % 400 == 0:
+#         print("It's a leap year!")
 

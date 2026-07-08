@@ -92,10 +92,101 @@
 # else:
 #     print("No protector available for this screen size")
 
-for i in range(0, 50//7):
-    print((i+1)*7)
+# for i in range(0, 50//7):
+#     print((i+1)*7)
 
-v = 7
-while v < 50:
-    print(v)
-    v += 7
+# v = 7
+# while v < 50:
+#     print(v)
+#     v += 7
+import sys
+def grade():
+    mark = 0
+    marks = 0
+    subjects = ['Math? ', 'English? ', 'History? ', 'Science? ', 'PE? ', 'Elective? ']
+    name = input("What is the name of the student: ")
+    for i in subjects:
+        mark += int(input("What marks did they get for " + str(i)))
+        marks = round(mark/6, 2)
+    grade = 'F'
+    if marks >= 85:
+        grade = 'A'
+    elif marks >=70 and marks <= 84:
+        grade = 'B'
+    elif marks >= 55 and marks <= 69:
+        grade = 'C'
+    elif marks >= 40 and marks <=54:
+        grade = 'D'
+    print(name , "got total marks of" , mark, ", an avarage mark of" , marks, "and a grade of" , grade + "!")
+    
+def donation():
+    money = 0
+    part = []
+    while True:
+        money = int(input("How much is donated? $"))
+        part.append(money)
+        enter = input("Are you entering more(y/n)? ")
+        if enter == 'n':
+            break
+        elif enter == 'y':
+            continue
+        else:
+            print("Error")
+            sys.exit()
+    print("The total amount of donors were:" , len(part) , "and, the total amount earned was:" , sum(part) , "and, the avarage donation was:" , sum(part)/len(part) , "and the most amount of money donated was:" , str(max(part)) + "!")
+    if sum(part) > 5000:
+        print(f'''Good evening everyone,
+
+When we started this fundraiser, we had a goal. Some people thought we'd reach it. Some people hoped we'd reach it. And some people were probably thinking, "We'll see."
+
+Well, tonight, I am proud to announce that we didn't just raise money—we raised an incredible ${sum(part)}
+
+Now, ${sum(part)} may just sound like a number, but it represents something much bigger. It represents generosity, teamwork, and a community willing to come together for a great cause.
+
+To everyone who donated: thank you. To everyone who volunteered: thank you. To everyone who spread the word, encouraged others, or supported us in any way: thank you.
+
+Because of you, what started as an idea became a reality.
+
+And let's be honest—raising ${sum(part)} isn't easy. If it were, I'd be standing here announcing my retirement from school and my new life on a private island.
+
+But seriously, this achievement belongs to all of you. Every dollar made a difference, and every contribution helped us reach this amazing milestone.
+
+So please give yourselves a round of applause. You earned it.
+
+Thank you for your support, thank you for believing in this cause, and thank you for helping make this fundraiser a huge success!''')
+
+
+def groceries():
+    total = 0
+    discount = 0
+    tax = 0
+    subtotal = 0
+    done = False
+    while not done:
+        input("Whats the name of the item? ")
+        total += int(input("Whats is the cost of the item? $")) * int(input("How much of this are you going to buy? "))
+        if input("Do you want to enter more(y/n)? ").lower() != 'y':
+             done = True
+    subtotal = total
+    if total > 150:
+        discount = total*0.10
+    elif total > 300:
+        discount = total*0.15
+    total = total - discount
+    tax = round(total*0.06, 2)
+    total += tax
+    print(f"Your base total is ${subtotal} and your discount off is ${discount} and your tax is ${tax}. Your final payment will be ${total}")
+
+def fitness():  
+    steps = 0
+    all = []
+    for i in range(1, 8):
+        steps = int(input(f"How many steps did you walk on day {i}? "))
+        all.append(steps)
+        steps = 0
+    
+    print(f"Your total amount of steps are {sum(all)}, the avarage amount of steps per day is {sum(all) / 7}, the most amount of steps was {max(all)}, and the lowest amount of steps was {min(all)}. ")
+    if sum(all) > 10000:
+        print("Congratulations! You walked more than 10000 steps!")
+
+fitness()

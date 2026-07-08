@@ -1,0 +1,97 @@
+1. School Exam Performance Report
+
+A school wants to automate the process of generating exam reports for students.
+
+Write a Python program that asks the user to enter a student's name and the marks obtained in six subjects. The program should calculate the total marks, average marks, and determine the student's grade based on the average score.
+
+Use the following grading system:
+
+    A: 85 and above
+    B: 70 to 84
+    C: 55 to 69
+    D: 40 to 54
+    F: Below 40
+
+The program should also determine whether the student has passed or failed. A student passes only if their average mark is at least 50.
+
+Finally, display a detailed report showing the student's name, all subject marks, total marks, average, grade, and pass/fail status.
+2. Community Fundraising Event
+
+A community organization is collecting donations for a charity event. Volunteers enter donation amounts as people contribute.
+
+Write a Python program that repeatedly asks the user to enter donation amounts. The program should continue accepting donations until the user enters 0, indicating that no more donations will be received.
+
+The program should:
+
+    Count the total number of donors.
+    Calculate the total amount collected.
+    Calculate the average donation amount.
+    Identify the largest donation received.
+    Display a special message if the total collected exceeds RM 5,000.
+
+At the end, print a fundraising summary report containing all calculated information.
+3. Grocery Store Billing System
+
+A small grocery store wants a simple billing system.
+
+Write a Python program that asks the customer how many different products they are purchasing. For each product, the user should enter:
+
+    Product name
+    Quantity purchased
+    Price per item
+
+Using a loop, calculate the cost for each product and add it to the overall bill.
+
+After all products have been entered:
+
+    Calculate the subtotal.
+    Apply a discount:
+        15% if subtotal exceeds 300.
+        10% if subtotal exceeds 150.
+        No discount otherwise.
+    Calculate a 6% sales tax on the discounted amount.
+    Display a detailed receipt showing the subtotal, discount amount, tax amount, and final total payable.
+
+4. Fitness Challenge Tracker
+
+A group of employees is participating in a 7-day fitness challenge where they record the number of steps walked each day.
+
+Write a Python program that asks the user to enter the number of steps taken for each of the seven days.
+
+The program should:
+
+    Calculate the total number of steps.
+    Calculate the average daily steps.
+    Determine the highest and lowest number of steps recorded.
+    Check whether the participant achieved the target of 10,000 average daily steps.
+
+Use loops to collect the data and if statements to determine whether the challenge goal was met.
+
+Display a complete summary of the participant's performance.
+5. Library Book Borrowing System
+
+A school library wants to track student book borrowing activity.
+
+Write a Python program that asks the librarian how many students borrowed books during the day.
+
+For each student, the program should ask for:
+
+    Student name
+    Number of books borrowed
+
+The program should then:
+
+    Keep track of the total number of books borrowed.
+    Count how many students borrowed more than 3 books.
+    Identify the student who borrowed the most books.
+    Calculate the average number of books borrowed per student.
+
+After all data has been entered, display a daily library report showing:
+
+    Total students served
+    Total books borrowed
+    Average books borrowed per student
+    Student who borrowed the most books
+    Number of students who borrowed more than 3 books
+
+If the total number of books borrowed exceeds 100, display a message indicating that it was a particularly busy day for the library.
