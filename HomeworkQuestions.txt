@@ -94,4 +94,4 @@ After all data has been entered, display a daily library report showing:
     Student who borrowed the most books
     Number of students who borrowed more than 3 books
 
-If the total number of books borrowed exceeds 100, display a message indicating that it was a particularly busy day for the library.
+If the total number of books borrowed exceeds 100, display a message indicating that it was a particularly busy day for the librar

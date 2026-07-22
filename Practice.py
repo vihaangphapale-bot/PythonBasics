@@ -99,6 +99,7 @@
 # while v < 50:
 #     print(v)
 #     v += 7
+
 import sys
 def grade():
     mark = 0
@@ -189,4 +190,132 @@ def fitness():
     if sum(all) > 10000:
         print("Congratulations! You walked more than 10000 steps!")
 
-fitness()
+def library():
+    total = 0
+    student = 0
+    more = 0
+    most = "bob"
+    amount = 0
+    name = ""
+    while True:
+        name = input("Name: ")
+        student += 1
+        book = int(input("Books: "))
+        total += book
+        if book > 3:
+            more += 1
+        if book > amount:
+            amount = book
+            most = name
+        if input("Press enter for more: ") != "":
+            break
+    print(f'''{total} amount of books were borrowed
+{student} amount of students were served
+{round(total/student,2)} was the average amount of books per student
+{most} got the most amount of books with {amount} books
+{more} students borrowed more than 3 books
+          ''')
+    if total > 100:
+        print("Today was a busy day.")
+import math
+
+
+def classroom():
+    row = int(input("Seats per row: "))
+    students = int(input("Number of students: "))
+
+    names = []
+    for i in range(students):
+        names.append(input("Name: "))
+
+    rows = math.ceil(students / row)
+    if students % row != 0:
+        for i in range(rows, 0, -1):
+            if students % i == 0 or students % i == 1:
+                rows = i
+                break
+
+    per_row = students // rows
+    for n in range(rows):
+        start = per_row * n
+        end = per_row * (n + 1)
+        print(names[start:end])
+
+    if students % rows == 1:
+        print(f"['{names[-1]}']")
+
+
+
+        
+def bus():
+    row = int(input("Seats per bus: "))
+    students = int(input("Number of people: "))
+
+    names = []
+    for i in range(students):
+        names.append(input("Name: "))
+    rows = math.ceil(students / row)
+    per_row = math.ceil(students / rows)
+    for n in range(rows):
+        start = per_row * n
+        end = per_row * (n + 1)
+        print(names[start:end])
+
+    if students % rows == 1:
+        print(f"['{names[-(students%row):]}']")
+    print(f"{math.ceil(students/row)} buses were used.")
+    print(f"{row-(students%row)} seats were empty.")
+
+def box():
+    b = input("What is the weight that 1 box can hold? ")
+    while True:
+        try:
+            b = int(b)
+            break
+        except:
+            b = input("What is the weight that 1 box can hold? ")
+    total = int(input("How many weights will you use? "))
+    while True:
+        try:
+            total = int(total)
+            break
+        except:
+            total = int(input("How many weights will you use? "))
+    w = []
+    for i in range(total):
+        while True:
+            l = input("What is the weight? ")
+            try: 
+                l = int(l)
+                w.append(l)
+                break
+            except:
+                l = input("What is the weight? ")
+    box = []
+    extra = []
+    w.sort(reverse=True)
+    for x in w:
+        # wlen = len(box)
+        # if wlen > 0:
+        space = False
+        if x > b:
+            extra.append(x)
+        else: 
+            for i in box:
+                if sum(i) + x <= b: 
+                    i.append(x)
+                    space = True
+
+            if space == False:
+                box.append([x])
+    f = 0
+    for i in box:
+        if sum(i) < b:
+            print(f"Unnused Space: {b-sum(i)} pounds for box {box.index(i) + 1}")
+        if f < sum(i):
+            f = sum(i)
+
+    print(box)
+    print(f"These are the weights that couldn't be placed: {extra}")
+    print(f"The fillest weight in a box was {f}!")
+box()
