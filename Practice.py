@@ -273,14 +273,14 @@ def box():
             b = int(b)
             break
         except:
-            b = input("What is the weight that 1 box can hold? ")
+            b = input("What is the weight that 1 box can hold? PLEASE USE NUMBERS ")
     total = int(input("How many weights will you use? "))
     while True:
         try:
             total = int(total)
             break
         except:
-            total = int(input("How many weights will you use? "))
+            total = int(input("How many weights will you use? PLEASE USE NUMBERS "))
     w = []
     for i in range(total):
         while True:
@@ -290,7 +290,7 @@ def box():
                 w.append(l)
                 break
             except:
-                l = input("What is the weight? ")
+                l = input("What is the weight PLEASE USE NUMBERS? ")
     box = []
     extra = []
     w.sort(reverse=True)
@@ -318,4 +318,35 @@ def box():
     print(box)
     print(f"These are the weights that couldn't be placed: {extra}")
     print(f"The fillest weight in a box was {f}!")
-box()
+import random
+def groups():
+    row = int(input("Desired Number of Students Per Group: "))
+    students = int(input("Number of students: "))
+
+    names = []
+    for i in range(students):
+        names.append(input("Name: "))
+    while True:
+        random.shuffle(names)
+        chart = []
+        bits = []
+        for i in names:
+            bits.append(i)
+            if len(bits) == row:
+                chart.append(bits)
+                bits = []
+        if bits != []:
+            chart.append(bits)
+        
+        while True:
+            l = max(chart, key = len)
+            s = min(chart, key = len)
+            if len(l) - len(s) < 2:
+                break
+            s.append(l.pop())
+        print(chart)
+        if input('Do you want to reshuffle(y/n)?').lower() != 'y':
+            break
+
+
+groups()
